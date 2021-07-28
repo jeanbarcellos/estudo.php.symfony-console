@@ -1,0 +1,11 @@
+{
+    "name": "jeanbarcellos/estudo.php.symfony-console",
+    "description": "Estudos/testes - criação de um app console",
+    "authors": [
+        {
+            "name": "Jean Barcellos",
+            "email": "jeanbarcellos@hotmail.com"
+        }
+    ],
+    "require": {}
+}
