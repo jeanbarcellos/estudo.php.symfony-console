@@ -7,5 +7,7 @@
             "email": "jeanbarcellos@hotmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "symfony/console": "^5.3"
+    }
 }
