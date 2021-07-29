@@ -9,11 +9,12 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class ColorCommand extends Command
 {
+    protected static $defaultName = 'app:colc';
+
     protected function configure()
     {
-        $this->setName('app:colc')
-            ->setDescription('Shows output in color')
-            ->setHelp('This command shows output in color');
+        $this->setDescription('Shows output in color');
+        $this->setHelp('This command shows output in color');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)

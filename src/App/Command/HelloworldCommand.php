@@ -9,10 +9,11 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class HelloWorldCommand extends Command
 {
+    protected static $defaultName = 'app:hello-world';
+
     protected function configure()
     {
-        $this->setName('app:hello-world')
-            ->setDescription('Prints Hello-World!')
+        $this->setDescription('Prints Hello-World!')
             ->setHelp('Demonstration of custom commands created by Symfony Console component.')
             ->addArgument('username', InputArgument::REQUIRED, 'Pass the username.');
     }

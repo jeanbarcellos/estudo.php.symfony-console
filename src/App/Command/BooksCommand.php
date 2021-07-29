@@ -9,11 +9,12 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class BooksCommand extends Command
 {
+    protected static $defaultName = 'app:books';
+
     protected function configure()
     {
-        $this->setName('app:books')
-            ->setDescription('Shows books in a table')
-            ->setHelp('This command demonstrates the usage of a table helper');
+        $this->setDescription('Shows books in a table');
+        $this->setHelp('This command demonstrates the usage of a table helper');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)

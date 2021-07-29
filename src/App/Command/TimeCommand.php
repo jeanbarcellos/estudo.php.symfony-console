@@ -8,11 +8,12 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class TimeCommand extends Command
 {
+    protected static $defaultName = 'app:create-user';
+
     protected function configure()
     {
-        $this->setName('app:time')
-            ->setDescription('Shows current date and time')
-            ->setHelp('This command prints the current date and time');
+        $this->setDescription('Shows current date and time');
+        $this->setHelp('This command prints the current date and time');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)

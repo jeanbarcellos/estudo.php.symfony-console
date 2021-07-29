@@ -9,11 +9,12 @@ use Symfony\Component\Console\Question\Question;
 
 class AskNameCommand extends Command
 {
+    protected static $defaultName = 'app:ask';
+
     protected function configure()
     {
-        $this->setName('app:ask')
-            ->setDescription('Interactively asks name from the user')
-            ->setHelp('This command asks a user name interactively and prints it');
+        $this->setDescription('Interactively asks name from the user');
+        $this->setHelp('This command asks a user name interactively and prints it');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)

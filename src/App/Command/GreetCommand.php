@@ -15,7 +15,6 @@ class GreetCommand extends Command
     {
         $this->addArgument('name', InputArgument::REQUIRED, 'Who do you want to greet?');
         $this->addArgument('last_name', InputArgument::OPTIONAL, 'Your last name?');
-
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int

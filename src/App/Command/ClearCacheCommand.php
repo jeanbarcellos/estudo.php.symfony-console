@@ -8,18 +8,19 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class ClearCacheCommand extends Command
 {
+    protected static $defaultName = 'app:clear-cache';
+
     protected function configure()
     {
-        $this->setName('app:clear-cache')
-            ->setDescription('Clears the application cache.')
-            ->setHelp('Allows you to delete the application cache. Pass the --groups parameter to clear caches of specific groups.')
-            ->addOption(
-                'groups',
-                'g',
-                InputOption::VALUE_OPTIONAL,
-                'Pass the comma separated group names if you don\'t want to clear all caches.',
-                ''
-            );
+        $this->setDescription('Clears the application cache.');
+        $this->setHelp('Allows you to delete the application cache. Pass the --groups parameter to clear caches of specific groups.');
+        $this->addOption(
+            'groups',
+            'g',
+            InputOption::VALUE_OPTIONAL,
+            'Pass the comma separated group names if you don\'t want to clear all caches.',
+            ''
+        );
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)

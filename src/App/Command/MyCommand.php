@@ -13,8 +13,8 @@ class MyCommand extends Command
 
     protected function configure(): void
     {
-        $this->setDescription('Comando test.')
-            ->setHelp('This command allows ...');
+        $this->setDescription('Comando test.');
+        $this->setHelp('This command allows ...');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
