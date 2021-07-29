@@ -3,6 +3,7 @@
 namespace App\Command;
 
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -23,12 +24,15 @@ class CreateUserCommand extends Command
 
     protected function configure(): void
     {
-        $this
         // a breve descrição mostrada durante a execução do comando
-        ->setDescription('Creates a new user.')
+        $this->setDescription('Creates a new user.');
 
         // a descrição completa do comando mostrada ao executar o comando com a opção "--help"
-            ->setHelp('This command allows you to create a user...');
+        $this->setHelp('This command allows you to create a user...');
+
+        // configure an argument
+        $this->addArgument('username', InputArgument::REQUIRED, 'The username of the user.');
+
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -40,16 +44,9 @@ class CreateUserCommand extends Command
             '',
         ]);
 
-        // o valor retornado por someMethod() pode ser um iterador (https://secure.php.net/iterator)
-        // que gera e retorna as mensagens com a palavra-chave PHP 'yield'
-        // $output->writeln($this->someMethod());
+        $output->writeln('Username: ' . $input->getArgument('username'));
 
-        // produz uma mensagem seguida por um "\n"
-        $output->writeln('Whoa!');
-
-        // gera uma mensagem sem adicionar um "\n" no final da linha
-        $output->write('You are about to ');
-        $output->write('create a user.');
+        $output->writeln('User successfully generated!');
 
         return Command::SUCCESS;
     }
