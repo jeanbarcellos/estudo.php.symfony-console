@@ -1,5 +1,6 @@
 <?php
 
+use App\Command\AskNameCommand;
 use App\Command\BooksCommand;
 use App\Command\ClearCacheCommand;
 use App\Command\ColorCommand;
@@ -18,4 +19,5 @@ return [
     TimeCommand::class,
     ColorCommand::class,
     BooksCommand::class,
+    AskNameCommand::class,
 ];
