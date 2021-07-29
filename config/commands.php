@@ -1,6 +1,7 @@
 <?php
 
 use App\Command\ClearCacheCommand;
+use App\Command\ColorCommand;
 use App\Command\CreateUserCommand;
 use App\Command\GreetCommand;
 use App\Command\HelloWorldCommand;
@@ -14,4 +15,5 @@ return [
     HelloWorldCommand::class,
     ClearCacheCommand::class,
     TimeCommand::class,
+    ColorCommand::class,
 ];
