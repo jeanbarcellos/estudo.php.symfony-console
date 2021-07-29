@@ -13,5 +13,6 @@ Instrutor:
 Referências:
 
 - [Documentação](https://symfony.com/doc/current/components/console.html)
-- [Como criar comandos CLI personalizados usando o componente Symfony Console](https://code.tutsplus.com/tutorials/how-to-create-custom-cli-commands-using-the-symfony-console-component--cms-31274)
+- [How to Create Custom CLI Commands Using the Symfony Console Component](https://code.tutsplus.com/tutorials/how-to-create-custom-cli-commands-using-the-symfony-console-component--cms-31274)
 - [Symfony Console Commands](https://zetcode.com/symfony/commands/)
+- [How to Make Commands Lazily Loaded](https://symfony.com/doc/current/console/lazy_commands.html)
