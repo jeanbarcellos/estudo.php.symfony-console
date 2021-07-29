@@ -7,10 +7,10 @@ use Symfony\Component\Console\Application;
 use Symfony\Component\Console\CommandLoader\FactoryCommandLoader;
 
 // Obter o nome dos arquivos do diretório
-$commandNames = Helper::listFiles(join(DIRECTORY_SEPARATOR, [__DIR__, 'src', 'App', 'Command']), false);
+$commandNames = Helper::listFiles(join(DIRECTORY_SEPARATOR, [__DIR__, 'src', 'App', 'Commands']), false);
 
 // Adição do namespace
-$commandNames = array_map(fn($commandName) => "App\\Command\\" . $commandName, $commandNames);
+$commandNames = array_map(fn($commandName) => "App\\Commands\\" . $commandName, $commandNames);
 
 // Montar o array com os comandos e seus devidos commands
 $factories = array_reduce($commandNames, function ($carry, $commandName) {

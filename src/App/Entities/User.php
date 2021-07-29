@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Entity;
+namespace App\Entites;
 
-use App\Entity\Entity as AbstractEntity;
+use App\Entites\Entity as AbstractEntity;
 
 class User extends AbstractEntity
 {
