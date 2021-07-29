@@ -10,7 +10,7 @@ class ClearCacheCommand extends Command
 {
     protected function configure()
     {
-        $this->setName('clear-cache')
+        $this->setName('app:clear-cache')
             ->setDescription('Clears the application cache.')
             ->setHelp('Allows you to delete the application cache. Pass the --groups parameter to clear caches of specific groups.')
             ->addOption(
@@ -39,5 +39,7 @@ class ClearCacheCommand extends Command
         }
 
         $output->writeln('Complete.');
+
+        return Command::SUCCESS;
     }
 }

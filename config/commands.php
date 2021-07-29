@@ -1,5 +1,6 @@
 <?php
 
+use App\Command\BooksCommand;
 use App\Command\ClearCacheCommand;
 use App\Command\ColorCommand;
 use App\Command\CreateUserCommand;
@@ -16,4 +17,5 @@ return [
     ClearCacheCommand::class,
     TimeCommand::class,
     ColorCommand::class,
+    BooksCommand::class,
 ];
