@@ -8,7 +8,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class TimeCommand extends Command
 {
-    protected static $defaultName = 'app:create-user';
+    protected static $defaultName = 'app:time';
 
     protected function configure()
     {

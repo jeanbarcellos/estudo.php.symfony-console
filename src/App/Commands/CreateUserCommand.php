@@ -2,6 +2,7 @@
 
 namespace App\Commands;
 
+use App\Entites\User;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -31,8 +32,8 @@ class CreateUserCommand extends Command
         $this->setHelp('This command allows you to create a user...');
 
         // configure an argument
-        $this->addArgument('username', InputArgument::REQUIRED, 'The username of the user.');
-
+        $this->addArgument('name', InputArgument::REQUIRED, 'The name of the user.');
+        $this->addArgument('email', InputArgument::REQUIRED, 'The email of the user.');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -44,8 +45,12 @@ class CreateUserCommand extends Command
             '',
         ]);
 
-        $output->writeln('Username: ' . $input->getArgument('username'));
+        $user = new User($input->getArgument('name'), $input->getArgument('email'));
 
+        $output->writeln('Name: ' . $user->getName());
+        $output->writeln('E-mail: ' . $user->getEmail());
+
+        $output->writeln('');
         $output->writeln('User successfully generated!');
 
         return Command::SUCCESS;
